@@ -51,9 +51,10 @@ public class Login {
     }
 
     @And("Close the browser")
-    public void close_the_browser() {
+    public void close_the_browser() throws InterruptedException {
         // Close the browser
         if (driver != null) {
+            Thread.sleep(5000);
             driver.quit();
             System.out.println("Browser closed.");
         }
